@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "PreferenceStateCompanionApp"
 include(":app")
- 
+include(":PreferenceState")
