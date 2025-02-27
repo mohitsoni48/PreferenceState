@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("maven-publish")
 }
 
 android {
@@ -49,4 +50,26 @@ dependencies {
 
     implementation(libs.androidx.datastore.preferences.core)
     implementation(libs.androidx.datastore.preferences)
+}
+
+android {
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+        }
+    }
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("release") {
+            groupId = "com.github.mohitsoni48"
+            artifactId = "PreferenceState"
+            version = "1.0.0"
+
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
+    }
 }
