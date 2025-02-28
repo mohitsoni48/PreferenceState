@@ -1,5 +1,5 @@
 # PreferenceState
-[![](https://jitpack.io/v/mohitsoni48/DataStoreState.svg)](https://jitpack.io/#mohitsoni48/PreferenceState)
+[![](https://jitpack.io/v/mohitsoni48/PreferenceState.svg)](https://jitpack.io/#mohitsoni48/PreferenceState)
 
 ## How to Install
 
