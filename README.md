@@ -5,7 +5,7 @@
 
 Add it in your root build.gradle at the end of repositories:
 
-```
+``` groovy
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -17,7 +17,7 @@ dependencyResolutionManagement {
 
 Add the dependency:
 
-```
+``` groovy 
 dependencies {
     implementation 'com.github.mohitsoni48:PreferenceState:<Version>'
 }
@@ -27,19 +27,19 @@ dependencies {
 
 Initialize DataStoreState in your application class or launching activity like this:
 
-```
+``` kotlin
 PreferenceState.initialize(context, "preferences_name")
 ```
 
 Use the provided `remember` functions to store and retrieve values from DataStore directly as state in Jetpack Compose:
 
-```
+``` kotlin
 var username by rememberStringPreferenceState("username", "Guest")
 ```
 
 Example Usage:
 
-```
+``` kotlin
 @Composable
 fun Greeting() {
     var randomString by rememberStringPreferenceState("randomString", "Hello World")
